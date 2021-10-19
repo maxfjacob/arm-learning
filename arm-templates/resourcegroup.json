@@ -7,14 +7,14 @@
             "metadata": {
                 "description": "Enter the location to deploy the resource to"
             },
-            "defaultValue": "East US"
+            "defaultValue": "Germany West Central"
         },
         "resourceGroupName": {
             "type": "string",
             "metadata": {
                 "description": "Enter the name for the resource group"
             },
-            "defaultValue": "rg-githubactions"
+            "defaultValue": "GIT"
         }
     },
     "functions": [],
