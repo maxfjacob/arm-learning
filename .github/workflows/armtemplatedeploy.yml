@@ -22,5 +22,6 @@ jobs:
         uses: Azure/cli@1.0.4
         with:
           inlinescript: |
-            az deployment sub create --location "eastus" --template-file ./arm-templates/resourcegroup.json
+            az deployment sub create --location "East US" --template-file ./arm-templates/resourcegroup.json
+            az account show
 
