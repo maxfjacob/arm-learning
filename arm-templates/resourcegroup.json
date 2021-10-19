@@ -14,7 +14,7 @@
             "metadata": {
                 "description": "Enter the name for the resource group"
             },
-            "defaultValue": "GIT"
+            "defaultValue": "rg-githubactions"
         }
     },
     "functions": [],

@@ -18,13 +18,12 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       
-      - name: Deploy Resource Group rg-githubactions with AZ CLI
       - name: Deploy Azure Resource Manager (ARM) Template RG rg-githubactions
         uses: Azure/arm-deploy@v1
         with:
           scope: subscription
           subscriptionId: 59b9446c-2c8a-4a25-88bd-f75261beef88
-          region: East US
+          region: Germany West Central
           template: ./arm-templates/resourcegroup.json
           deploymentName: rg-githubactions
 
