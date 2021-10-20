@@ -35,8 +35,10 @@ jobs:
           resourceGroupName: rg-githubactions
           subscriptionId: 59b9446c-2c8a-4a25-88bd-f75261beef88
           template: ./arm-templates/storageaccount.json
-          parameters: ./arm-templates/storageaccount.parameters.json
+          parameters: 
+            ./arm-templates/storageaccount.parameters.json
+            storageAccountName=globostg002mfj
           deploymentMode: incremental
 
-      - run: echo ${{ steps.storageAccountDeploy.outputs.BlobUri }}
+#      - run: echo ${{ steps.storageAccountDeploy.outputs.BlobUri }}
 
