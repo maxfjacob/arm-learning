@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 env:
   resource_group_name: rg-githubactions
-  location: "Germany Central West"
+  location: Germany Central West
   subscriptionId: 59b9446c-2c8a-4a25-88bd-f75261beef88
 jobs:
   armDeploy:
@@ -26,10 +26,10 @@ jobs:
         with:
           scope: subscription
           subscriptionId: ${{env.subscriptionId}}
-          region: ${{env.location}}
+          region: "${{env.location}}"
           template: ./arm-templates/resourcegroup.json
           parameters: 
-            location=${{env.location}}
+            location="${{env.location}}"
             resourceGroupName=${{env.resource_group_name}}
           deploymentName: ${{env.resource_group_name}}
 
@@ -44,7 +44,7 @@ jobs:
           parameters: 
             ./arm-templates/storageaccount.parameters.json
             storageAccountName=globostg002mfj
-            location=${{env.location}}
+            location="${{env.location}}"
           deploymentMode: incremental
 
 #      - run: echo ${{ steps.storageAccountDeploy.outputs.BlobUri }}
@@ -58,6 +58,6 @@ jobs:
           template: ./arm-templates/virtualmachine.json
           parameters: 
             adminPassword=${{secrets.UBUNTU_ADMIN_PASSWORD}}
-            location=${{env.location}}
+            location="${{env.location}}"
           deploymentMode: incremental
 
